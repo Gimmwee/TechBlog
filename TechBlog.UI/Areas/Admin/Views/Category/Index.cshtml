@@ -1,0 +1,81 @@
+﻿@model IEnumerable<TechBlog.Core.Models.Category>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_ActionLayout.cshtml";
+}
+
+<h2 style="font-weight:600">List Categories</h2>
+<p>
+    <a asp-action="Create" asp-area="Admin" asp-controller="Category">Create New</a>
+</p>
+<table class="table" style="font-size: 14px">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UrlSlug)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UrlSlug)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td style="white-space: nowrap">
+                <a asp-action="Edit" asp-area="Admin" asp-route-id="@item.CategoryId">Edit</a> |
+                    @Html.ActionLink("Details", "Details",new {  id=item.CategoryId  }) |
+                @Html.ActionLink("Delete", "Delete",new {  id=item.CategoryId  }, new { onclick = "return confirm('Are you sure to delete this category?');"})
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<div class="d-flex justify-content-center">
+    <nav aria-label="Page navigation text-center">
+        <ul class="pagination">
+            @if (ViewBag.PageNumber > 1)
+            {
+                <li class="page-item">
+                    <a href="/Category/Index?page=1" class="page-link">&lt&lt</a>
+                </li>
+                @*<li class="page-item">
+            <a href="@Url.Action("Index", "Post", new { page = ViewBag.PageNumber - 1 })" class="page-link">&ltPrev</a>
+            <a href="/Post/Index?page=@ViewBag.PageNumber -1" class="page-link">&lt Prev</a>
+            </li>*@
+            }
+
+            @for (int i = 1; i <= Math.Ceiling((decimal)ViewBag.TotalRecords / ViewBag.PageSize); i++)
+            {
+                <li class="page-item @(ViewBag.PageNumber == i ? "active" : "")">
+                    <a href="/Category/Index?page=@i" class="page-link">@i</a>
+                </li>
+            }
+
+            @if (ViewBag.PageNumber < Math.Ceiling((decimal)ViewBag.TotalRecords / ViewBag.PageSize))
+            {
+                @*<li class="page-item">
+            <a href="@Url.Action("Index", "Post",new { page = ViewBag.PageNumber + 1 })" class="page-link">Next ></a>
+            <a href="/Post/Index?page=@ViewBag.PageNumber + 1" class="page-link">Next ></a>
+            </li>*@
+                <li class="page-item">
+                    <a href="/Category/Index?page=@Math.Ceiling((decimal)ViewBag.TotalRecords / ViewBag.PageSize)" class="page-link">>></a>
+                </li>
+            }
+        </ul>
+    </nav>
+</div>

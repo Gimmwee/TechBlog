@@ -30,7 +30,7 @@ namespace TechBlog.Core.DataContext
             base.OnConfiguring(optionsBuilder);
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Server=Gimmwee\SQLEXPRESS;Database=TechBlogDb;Trusted_Connection=True;TrustServerCertificate=true");
+                optionsBuilder.UseSqlServer(@"Server=(local);Database=TechBlogDb;Trusted_Connection=True;TrustServerCertificate=true");
             }
         }
 

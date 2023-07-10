@@ -1,0 +1,102 @@
+﻿@model IEnumerable<TechBlog.Core.Models.Post>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_ActionLayout.cshtml";
+}
+<h2 style="font-weight:600">List Posts</h2>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Published)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PostedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modified)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ViewCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RateCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryId)
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Published)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modified)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViewCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RateCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PostId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PostId">Details</a> |
+                    @Html.ActionLink("Delete", "Delete",new {  id=item.PostId  }, new { onclick = "return confirm('Are you sure to delete this post?');"})
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<div class="d-flex justify-content-center">
+    <nav aria-label="Page navigation text-center">
+        <ul class="pagination">
+            @if (ViewBag.PageNumber > 1)
+            {
+                <li class="page-item">
+                    <a href="/PostManage/Index?page=1" class="page-link">&lt&lt</a>
+                </li>
+            }
+
+            @for (int i = 1; i <= Math.Ceiling((decimal)ViewBag.TotalRecords / ViewBag.PageSize); i++)
+            {
+                <li class="page-item @(ViewBag.PageNumber == i ? "active" : "")">
+                    <a href="/PostManage/Index?page=@i" class="page-link">@i</a>
+                </li>
+            }
+
+            @if (ViewBag.PageNumber < Math.Ceiling((decimal)ViewBag.TotalRecords / ViewBag.PageSize))
+            {
+                <li class="page-item">
+                    <a href="/PostManage/Index?page=@Math.Ceiling((decimal)ViewBag.TotalRecords / ViewBag.PageSize)" class="page-link">>></a>
+                </li>
+            }
+        </ul>
+    </nav>
+</div>

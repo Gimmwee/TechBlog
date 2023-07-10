@@ -1,0 +1,43 @@
+﻿@page
+@model FA.JustBlog.UI.Areas.Identity.Pages.Role.AddUserRoleModel
+@{
+    ViewData["Title"] = "Update Role For User";
+    Layout = "~/Areas/Admin/Views/Shared/_ActionLayout.cshtml";
+}
+<h2>@ViewData["Title"]</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <p>Chọn các role gán cho <strong>@Model.Input.Name</strong></p>
+        <form method="post">
+            <partial name="_StatusMessage" model="@Model.StatusMessage" />
+            <div class="form-group">
+                @Html.LabelFor(x => x.Input.RoleNames)
+                @Html.ListBoxFor(x => x.Input.RoleNames,
+                new SelectList( Model.AllRoles ),
+                new {@class="w-100", id = "selectrole"})
+            </div>
+
+            @*<div asp-validation-summary="All" class="text-danger"></div>*@
+            <input type="hidden" asp-for="Input.ID" style="margin-bottom: 10px">
+            <input type="hidden" asp-for="isConfirmed">
+            <a class="btn btn-primary rounded-2" asp-page="./User">List User</a>
+            <button type="submit" class="btn btn-danger rounded-2">Update Role</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/multiple-select/multiple-select.min.js"></script>
+    <link rel="stylesheet" href="~/lib/multiple-select/multiple-select.min.css" />
+    <script>
+        $('#selectrole').multipleSelect({
+            selectAll: false,
+            keepOpen: false,
+            isOpen: false
+        });
+    </script>
+
+
+    @*<partial name="_ValidationScriptsPartial" />*@
+    }

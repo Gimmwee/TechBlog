@@ -1,0 +1,50 @@
+﻿@page "/Admin/Role/Users/"
+@model FA.JustBlog.UI.Areas.Identity.Pages.Role.UserModel
+@{
+    ViewData["Title"] = "List Users";
+    Layout = "~/Areas/Admin/Views/Shared/_ActionLayout.cshtml";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>UserName</th>
+        <th>Roles</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var user in @Model.users)
+    {
+        <tr>
+            <td>@user.UserName</td>
+            <td>@user.listroles</td>
+            <td>
+                <form method="POST" class="d-inline">
+                    <button name="Input.ID" value="@user.Id" class="btn btn-primary btn-sm rounded-2"
+                        asp-page="./AddUserRole">
+                        Update Role
+                    </button>
+                </form>
+            </td>
+        </tr>
+
+    }
+</table>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+@{
+
+    Func<int?, string> generateUrl = (int? _pagenumber) =>
+    {
+        return Url.Page("./User", new { pageNumber = _pagenumber });
+    };
+
+    var datapaging = new
+    {
+        currentPage = Model.pageNumber,
+        countPages = Model.totalPages,
+        generateUrl = generateUrl
+    };
+
+}

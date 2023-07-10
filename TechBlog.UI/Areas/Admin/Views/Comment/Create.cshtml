@@ -1,0 +1,64 @@
+﻿@model TechBlog.Core.Models.Comment
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Create";
+	var list = ViewData["posts"] as List<SelectListItem>;
+    Layout = "~/Areas/Admin/Views/Shared/_ActionLayout.cshtml";
+}
+
+<form method="post" asp-controller="Comment" asp-action="Create">
+
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h4 class="text-dark">Create Comment</h4>
+			<hr />
+		</div>
+		<div asp-validation-summary="All" class="text-danger"></div>
+		<div class="mb-3">
+			<label asp-for="@Model.Name"></label>
+			<input asp-for="@Model.Name" class="form-control" />
+			<span asp-validation-for="@Model.Name" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="@Model.Email"></label>
+			<input asp-for="@Model.Email" rows="3" class="form-control"/>
+			<span asp-validation-for="@Model.Email" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+            <label asp-for="PostId" class="control-label">Posts Name</label>
+            <select asp-for="PostId" asp-items="list" class="form-control"></select>
+            <span asp-validation-for="PostId" class="text-danger"></span>
+
+        </div>
+		<div class="mb-3">
+			<label asp-for="@Model.CommentHeader"></label>
+			<input asp-for="@Model.CommentHeader" rows="3" class="form-control" />
+			<span asp-validation-for="@Model.CommentHeader" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="@Model.CommentText"></label>
+			<input asp-for="@Model.CommentText" class="form-control" />
+			<span asp-validation-for="@Model.CommentText" class="text-danger"></span>
+		</div>
+		<button type="submit" class="btn btn-dark" style="width:150px">Create</button>
+		<a asp-controller="Comment" asp-action="Index" class="btn btn-outline-dark" style="width:150px">
+			Back to list
+		</a>
+	</div>
+	@*<partial name="_ValidationScriptsPartial" />*@
+</form>
+@section Scripts{
+	<partial name="_ValidationScriptsPartial" />
+	<script>
+		tinymce.init({
+			selector: 'textarea',
+			plugins: 'a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
+			toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter image editimage pageembed permanentpen table tableofcontents',
+			toolbar_mode: 'floating',
+			tinycomments_mode: 'embedded',
+			tinycomments_author: 'Author name',
+		});
+
+	</script>
+}
+

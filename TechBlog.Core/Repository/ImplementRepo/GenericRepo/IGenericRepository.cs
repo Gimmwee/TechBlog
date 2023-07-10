@@ -28,5 +28,6 @@ namespace TechBlog.Core.Repository.GenericRepo
         //void GetById(int id);
         IEnumerable<TEntity> GetAll(); 
         TEntity Find(int id);
+        TEntity GetEntityById(int id);
     }
 }

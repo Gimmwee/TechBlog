@@ -1,0 +1,24 @@
+﻿@using FA.JustBlog.Core.Models
+@using FA.JustBlog.Core.Repository.UnitOfWork
+@model IEnumerable<Posts>;
+@inject IUnitOfWork unitOfWork
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    IEnumerable<Posts> mostFiveLatedPosts = unitOfWork.Post.GetLatestPost(5);
+
+}
+
+@foreach (var item in mostFiveLatedPosts)
+{
+    <h5>
+        <a style="text-decoration:underline" asp-area="Customer" asp-controller="Post"
+       asp-action="Details" asp-route-id="@item.PostId">
+            @item.Title
+        </a>
+    </h5>
+
+    <p style="font-style:italic;">
+        Posted @item.PostedOn with rate @item.Rate.ToString("#.##") by @item.ViewCount
+    </p>
+}

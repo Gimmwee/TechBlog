@@ -2015,19 +2015,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Son\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Ky 7\\PRN221\\TechBlog\\TechBlog.Core\\TechBlog.Core.csproj",
+      "projectUniqueName": "D:\\PRN221\\TechBlog\\TechBlog.Core\\TechBlog.Core.csproj",
       "projectName": "TechBlog.Core",
-      "projectPath": "D:\\Ky 7\\PRN221\\TechBlog\\TechBlog.Core\\TechBlog.Core.csproj",
-      "packagesPath": "C:\\Users\\Son\\.nuget\\packages\\",
-      "outputPath": "D:\\Ky 7\\PRN221\\TechBlog\\TechBlog.Core\\obj\\",
+      "projectPath": "D:\\PRN221\\TechBlog\\TechBlog.Core\\TechBlog.Core.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\PRN221\\TechBlog\\TechBlog.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Son\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
