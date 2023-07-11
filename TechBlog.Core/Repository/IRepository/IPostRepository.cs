@@ -12,6 +12,7 @@ namespace TechBlog.Core.Repository.IRepository
     public interface IPostRepository : IGenericRepository<Post>
     {
         Post FindPost(int year, int month, string urlSlug);
+        Post GetPosts(int id);
         IList<Post> GetPublisedPosts();
         IList<Post> GetUnpublisedPosts();
         IList<Post> GetLatestPost(int size);

@@ -140,5 +140,10 @@ namespace TechBlog.Core.Repository.ImplementRepo
   .Select(ptm => ptm.PostId)
   .Contains(p.PostId)).ToList();
         }
+
+        public Post GetPosts(int id)
+        {
+            return _context.Posts.FirstOrDefault(p => p.PostId == id);
+        }
     }
 }

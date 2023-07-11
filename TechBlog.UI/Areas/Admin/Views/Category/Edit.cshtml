@@ -1,0 +1,46 @@
+﻿@model TechBlog.Core.Models.Category
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_ActionLayout.cshtml";
+}
+
+<form method="post" asp-controller="Category" asp-action="Edit">
+    <input asp-for="@Model.CategoryId" class="form-control" hidden />
+
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h4 class="text-dark">Edit Category</h4>
+            <hr />
+        </div>
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="mb-3">
+            <label asp-for="@Model.Name"></label>
+            <input asp-for="@Model.Name" class="form-control" />
+            <span asp-validation-for="@Model.Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="@Model.Description"></label>
+            <input asp-for="@Model.Description" rows="3" class="form-control" />
+            <span asp-validation-for="@Model.Description" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-dark" style="width:150px">Edit</button>
+        <a asp-controller="Category" asp-action="Index" class="btn btn-outline-dark" style="width:150px">
+            Back to list
+        </a>
+    </div>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
+            toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter image editimage pageembed permanentpen table tableofcontents',
+            toolbar_mode: 'floating',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+        });
+    </script>
+}

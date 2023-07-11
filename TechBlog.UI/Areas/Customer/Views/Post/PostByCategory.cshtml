@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "PostByCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center align-items-start">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <h1 class="post-title">Posts By Category</h1>
+            <hr />
+            @*@if (Model.Count() > 0)
+            {*@
+                @foreach (var item in Model)
+                {
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="Details?id=@item.PostId">
+                            <h2 class="post-title">@item.Title</h2>
+                            <h3 class="post-subtitle">@item.ShortDescription</h3>
+                        </a>
+                        <p class="post-meta">
+                            Posted by
+                            <a href="#!">KienDC4</a>
+                            on @item.PostedOn
+                        </p>
+                    </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                }
+           @* }*@
+
+            <!-- Pager-->
+            <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+        </div>
+    </div>
+
+</div>

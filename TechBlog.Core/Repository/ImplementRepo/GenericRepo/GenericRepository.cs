@@ -78,7 +78,12 @@ namespace TechBlog.Core.Repository.GenericRepo
             return dbSet.ToList();
         }
 
-      
+        public TEntity GetEntityById(int id)
+        {
+            return dbSet.Find(id);
+        }
+
+
 
         //public void GetById(int id)
         //{
