@@ -304,3 +304,12 @@ D:\PRN221\TechBlog\TechBlog.UI\obj\Debug\net6.0\refint\TechBlog.UI.dll
 D:\PRN221\TechBlog\TechBlog.UI\obj\Debug\net6.0\TechBlog.UI.pdb
 D:\PRN221\TechBlog\TechBlog.UI\obj\Debug\net6.0\TechBlog.UI.genruntimeconfig.cache
 D:\PRN221\TechBlog\TechBlog.UI\obj\Debug\net6.0\ref\TechBlog.UI.dll
+D:\Ky 7\ProjectPRN221\TechBlog\TechBlog.UI\obj\Debug\net6.0\TechBlog.UI.csproj.AssemblyReference.cache
+D:\Ky 7\ProjectPRN221\TechBlog\TechBlog.UI\obj\Debug\net6.0\TechBlog.UI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Ky 7\ProjectPRN221\TechBlog\TechBlog.UI\obj\Debug\net6.0\TechBlog.UI.AssemblyInfoInputs.cache
+D:\Ky 7\ProjectPRN221\TechBlog\TechBlog.UI\obj\Debug\net6.0\TechBlog.UI.AssemblyInfo.cs
+D:\Ky 7\ProjectPRN221\TechBlog\TechBlog.UI\obj\Debug\net6.0\TechBlog.UI.csproj.CoreCompileInputs.cache
+D:\Ky 7\ProjectPRN221\TechBlog\TechBlog.UI\obj\Debug\net6.0\TechBlog.UI.MvcApplicationPartsAssemblyInfo.cs
+D:\Ky 7\ProjectPRN221\TechBlog\TechBlog.UI\obj\Debug\net6.0\TechBlog.UI.MvcApplicationPartsAssemblyInfo.cache
+D:\Ky 7\ProjectPRN221\TechBlog\TechBlog.UI\obj\Debug\net6.0\TechBlog.UI.RazorAssemblyInfo.cache
+D:\Ky 7\ProjectPRN221\TechBlog\TechBlog.UI\obj\Debug\net6.0\TechBlog.UI.RazorAssemblyInfo.cs

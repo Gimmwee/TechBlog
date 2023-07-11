@@ -8,261 +8,261 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TechBlog.UI
 build_property.RootNamespace = TechBlog.UI
-build_property.ProjectDir = D:\PRN221\TechBlog\TechBlog.UI\
+build_property.ProjectDir = D:\Ky 7\ProjectPRN221\TechBlog\TechBlog.UI\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\PRN221\TechBlog\TechBlog.UI
+build_property.MSBuildProjectDirectory = D:\Ky 7\ProjectPRN221\TechBlog\TechBlog.UI
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Category/Create.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Category/Details.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Category/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Category/Edit.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Category/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Category/Index.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Comment/Create.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Comment/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tbWVudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Comment/Details.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Comment/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tbWVudFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Comment/Edit.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Comment/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tbWVudFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Comment/Index.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Comment/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tbWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Home/Index.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/PostManage/Create.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/PostManage/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdE1hbmFnZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/PostManage/Details.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/PostManage/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdE1hbmFnZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/PostManage/Edit.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/PostManage/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdE1hbmFnZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/PostManage/Index.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/PostManage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdE1hbmFnZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/PostManage/LastedPost.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/PostManage/LastedPost.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdE1hbmFnZVxMYXN0ZWRQb3N0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/PostManage/MostViewedPosts.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/PostManage/MostViewedPosts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdE1hbmFnZVxNb3N0Vmlld2VkUG9zdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/PostManage/PublisedPosts.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/PostManage/PublisedPosts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdE1hbmFnZVxQdWJsaXNlZFBvc3RzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/PostManage/UnpublisedPosts.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/PostManage/UnpublisedPosts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdE1hbmFnZVxVbnB1Ymxpc2VkUG9zdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Shared/_404Layout.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Shared/_404Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF80MDRMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Shared/_ActionLayout.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Shared/_ActionLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BY3Rpb25MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Shared/_LoginPartial.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Tag/Create.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Tag/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Tag/Details.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Tag/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Tag/Edit.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Tag/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Tag/Index.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/Tag/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/_ViewImports.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/_ViewStart.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Customer/Views/Post/Details.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Customer/Views/Post/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcUG9zdFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Customer/Views/Post/Index.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Customer/Views/Post/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcUG9zdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Customer/Views/Post/PostByCategory.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Customer/Views/Post/PostByCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcUG9zdFxQb3N0QnlDYXRlZ29yeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Customer/Views/Shared/_ListCommentForPost.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Customer/Views/Shared/_ListCommentForPost.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcU2hhcmVkXF9MaXN0Q29tbWVudEZvclBvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Customer/Views/Shared/_ListPostsForLated.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Customer/Views/Shared/_ListPostsForLated.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcU2hhcmVkXF9MaXN0UG9zdHNGb3JMYXRlZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Customer/Views/Shared/_ListPostsForMostView.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Customer/Views/Shared/_ListPostsForMostView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcU2hhcmVkXF9MaXN0UG9zdHNGb3JNb3N0Vmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Customer/Views/Shared/_PartialAboutCard.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Customer/Views/Shared/_PartialAboutCard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcU2hhcmVkXF9QYXJ0aWFsQWJvdXRDYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Customer/Views/Shared/_PopularTags.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Customer/Views/Shared/_PopularTags.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcU2hhcmVkXF9Qb3B1bGFyVGFncy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Customer/_ViewImports.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Customer/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxFeHRlcm5hbExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Account/Login.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Account/Logout.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Account/Register.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Account/_AuthenticationLayout.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Account/_AuthenticationLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfQXV0aGVudGljYXRpb25MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Account/_ViewStart.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Account/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Role/Add.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Role/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUm9sZVxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Role/AddUserRole.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Role/AddUserRole.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUm9sZVxBZGRVc2VyUm9sZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Role/Delete.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Role/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUm9sZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Role/Index.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Role/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUm9sZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Role/User.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Role/User.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUm9sZVxVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Role/_ViewStart.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/Role/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUm9sZVxfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/_IdentityLayout.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/_IdentityLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX0lkZW50aXR5TGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/_StatusMessage.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/_StatusMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1N0YXR1c01lc3NhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/_ViewImports.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Views/Home/Index.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Views/Home/Privacy.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Views/Shared/Error.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Views/Shared/_MenuLayout.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Views/Shared/_MenuLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZW51TGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Views/_ViewImports.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Views/_ViewStart.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/TechBlog/TechBlog.UI/Views/Shared/_Layout.cshtml]
+[D:/Ky 7/ProjectPRN221/TechBlog/TechBlog.UI/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-a0kvawovp7
