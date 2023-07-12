@@ -135,6 +135,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcUG9zdFxQb3N0QnlDYXRlZ29yeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/PRN221/TechBlog/TechBlog.UI/Areas/Customer/Views/Post/_GetLatedPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcUG9zdFxfR2V0TGF0ZWRQb3N0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/PRN221/TechBlog/TechBlog.UI/Areas/Customer/Views/Shared/_ListCommentForPost.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcU2hhcmVkXF9MaXN0Q29tbWVudEZvclBvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

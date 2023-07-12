@@ -1,11 +1,11 @@
-﻿using FA.JustBlog.UI.Areas.Identity.Data;
+﻿using TechBlog.UI.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Build.Framework;
 using Microsoft.EntityFrameworkCore;
 
-namespace FA.JustBlog.UI.Areas.Identity.Pages.Role
+namespace TechBlog.UI.Areas.Identity.Pages.Role
 {
     
     public class AddUserRoleModel : PageModel

@@ -1,5 +1,4 @@
-﻿
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
@@ -27,7 +26,7 @@ namespace TechBlog.UI.Areas.Admin.Controllers
             int pageSize = 5;
             int pageNumber = (page ?? 1);
 
-            var categories = _uow.Category.GetAll()
+            var categories = _uow.CategoryRepository.GetAll()
                                 .OrderByDescending(p => p.CategoryId)
                                 .Skip((pageNumber - 1) * pageSize)
                                 .Take(pageSize)

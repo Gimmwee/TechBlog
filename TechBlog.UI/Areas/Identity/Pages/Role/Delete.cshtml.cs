@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Build.Framework;
 using System.Data;
 
-namespace FA.JustBlog.UI.Areas.Identity.Pages.Role
+namespace TechBlog.UI.Areas.Identity.Pages.Role
 {
     [Authorize(Roles = "Admin, Blog Owner")]
     public class DeleteModel : PageModel

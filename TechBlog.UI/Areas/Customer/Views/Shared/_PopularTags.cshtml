@@ -1,8 +1,8 @@
-﻿@using FA.JustBlog.Core.Models
-@using FA.JustBlog.Core.Repository.UnitOfWork
+﻿@using TechBlog.Core.Models
+@using TechBlog.Core.Repository.UnitOfWork
 @inject IUnitOfWork unitOfWork
 @{
-    IEnumerable<Tags> tagsList = unitOfWork.Tag.GetAll().OrderByDescending(t => t.Count);
+    IEnumerable<Tag> tagsList = unitOfWork.TagRepository.GetAll().OrderByDescending(t => t.Count);
 }
 
 @foreach (var item in tagsList)

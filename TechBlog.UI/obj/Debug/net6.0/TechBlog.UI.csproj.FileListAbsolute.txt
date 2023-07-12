@@ -304,3 +304,4 @@ D:\PRN221\TechBlog\TechBlog.UI\obj\Debug\net6.0\refint\TechBlog.UI.dll
 D:\PRN221\TechBlog\TechBlog.UI\obj\Debug\net6.0\TechBlog.UI.pdb
 D:\PRN221\TechBlog\TechBlog.UI\obj\Debug\net6.0\TechBlog.UI.genruntimeconfig.cache
 D:\PRN221\TechBlog\TechBlog.UI\obj\Debug\net6.0\ref\TechBlog.UI.dll
+D:\PRN221\TechBlog\TechBlog.UI\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

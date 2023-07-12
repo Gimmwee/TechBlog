@@ -1,11 +1,11 @@
-﻿@using FA.JustBlog.Core.Models
-@using FA.JustBlog.Core.Repository.UnitOfWork
-@model IEnumerable<Posts>;
+﻿@using TechBlog.Core.Models
+@using TechBlog.Core.Repository.UnitOfWork
+@model IEnumerable<Post>;
 @inject IUnitOfWork unitOfWork
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
-    IEnumerable<Posts> mostFiveLatedPosts = unitOfWork.Post.GetLatestPost(5);
+    IEnumerable<Post> mostFiveLatedPosts = unitOfWork.PostRepository.GetLatestPost(5);
 
 }
 

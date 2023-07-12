@@ -24,5 +24,6 @@ namespace TechBlog.Core.Repository.IRepository
         IList<Post> GetHighestPosts(int size);
 
         Post GetPostByUrlSlug(string urlSlug);
+        Post GetLatedPost();
     }
 }

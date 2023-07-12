@@ -1,13 +1,13 @@
-﻿@using FA.JustBlog.Core.Models
-@using FA.JustBlog.Core.Repository.UnitOfWork
-@using FA.JustBlog.UI.Areas.Identity.Data
+﻿@using TechBlog.Core.Models
+@using TechBlog.Core.Repository.UnitOfWork
+@using TechBlog.UI.Areas.Identity.Data
 @using Microsoft.AspNetCore.Identity
 @inject IUnitOfWork uow;
-@model Posts;
+@model Post;
 
 @inject UserManager<IdentifyUsingUser> UserManager
 @{
-    IList<Comments> comments = uow.Comments.GetCommentsForPost(Model.PostId);
+    IList<Comment> comments = uow.CommentRepository.GetCommentsForPost(Model.PostId);
 }
 
 <style>

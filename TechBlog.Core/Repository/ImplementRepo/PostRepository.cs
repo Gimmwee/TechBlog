@@ -145,5 +145,15 @@ namespace TechBlog.Core.Repository.ImplementRepo
         {
             return _context.Posts.FirstOrDefault(p => p.PostId == id);
         }
+
+        public Post GetLatedPost()
+        {
+
+
+            return _context.Posts.OrderByDescending(p => p.PostedOn).FirstOrDefault();
+
+            
+        }
     }
 }
+
