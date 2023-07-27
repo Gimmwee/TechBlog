@@ -22,7 +22,14 @@ namespace TechBlog.Core.Repository.IRepository
         IList<Post> GetPostsByTag(string tag);
         IList<Post> GetMostViewedPost(int size);
         IList<Post> GetHighestPosts(int size);
-
         Post GetPostByUrlSlug(string urlSlug);
+        Post GetLatedPost();
+        IList<Post> GetPostsByTitle(string title);
+        bool IsTitleDuplicate(string title);
+        void Detach(Post post);
+        IList<Post> GetAllPosts();
+
+        IList<Post> GetPostsByCategoryId(int categoryId);
+
     }
 }

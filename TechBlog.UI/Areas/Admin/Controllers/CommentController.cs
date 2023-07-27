@@ -11,7 +11,7 @@ namespace TechBlog.UI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Comment/{action}")]
-    [Authorize(Roles = "Admin, Blog Owner, Contibutor")]
+    //[Authorize(Roles = "Admin, Blog Owner, Contributor")]
     public class CommentController : Controller
     {
         private readonly IUnitOfWork _uow;
@@ -80,7 +80,7 @@ namespace TechBlog.UI.Areas.Admin.Controllers
         }
 
         // GET: CommentController/Edit/5
-        [Authorize(Roles = "Admin, Blog Owner, Contibutor")]
+        //[Authorize(Roles = "Admin, Blog Owner, Contributor")]
         public ActionResult Edit(int? id)
         {
             if (id == null || id == 0)
@@ -104,7 +104,7 @@ namespace TechBlog.UI.Areas.Admin.Controllers
         }
 
         // POST: CommentController/Edit/5
-        [Authorize(Roles = "Admin, Blog Owner, Contibutor")]
+        //[Authorize(Roles = "Admin, Blog Owner, Contributor")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Comment comments)
@@ -118,7 +118,7 @@ namespace TechBlog.UI.Areas.Admin.Controllers
         }
 
         // GET: CommentController/Delete/5
-        [Authorize(Roles = "Admin, Blog Owner")]
+       [Authorize(Roles = "Admin, Blog Owner")]
         public ActionResult Delete(int? id)
         {
             if (id.HasValue)
@@ -127,6 +127,18 @@ namespace TechBlog.UI.Areas.Admin.Controllers
                 _uow.SaveChange();
             }
             return RedirectToAction("Index");
+        }
+
+        public IActionResult SearchComment(string? searchTerm)
+        {
+
+            var comments = _uow.CommentRepository.GetCommentsByName(searchTerm);
+            ViewBag.SearchTerm = searchTerm;
+            if (!comments.Any())
+            {
+                ViewBag.Message = "Không tim thấy \"" + searchTerm + "\".";
+            }
+            return View(comments);
         }
 
     }

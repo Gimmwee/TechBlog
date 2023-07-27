@@ -1,0 +1,55 @@
+﻿@model IEnumerable<TechBlog.Core.Models.Category>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_ActionLayout.cshtml";
+}
+
+<h2 style="font-weight:600">Search Results for @ViewBag.SearchTerm</h2>
+<p>
+    <a asp-action="Create" asp-area="Admin" asp-controller="Category">Create New</a>
+</p>
+@if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}
+@if (Model.Any())
+{
+    <table class="table" style="font-size: 14px">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UrlSlug)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Desciption)
+                </th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UrlSlug)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Desciption)
+                    </td>
+                    <td style="white-space: nowrap">
+                        <a asp-action="Edit" asp-area="Admin" asp-route-id="@item.CategoryId">Edit</a> |
+                        @Html.ActionLink("Details", "Details",new {  id=item.CategoryId  }) |
+                        @Html.ActionLink("Delete", "Delete",new {  id=item.CategoryId  }, new { onclick = "return confirm('Are you sure to delete this category?');"})
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

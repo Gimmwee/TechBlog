@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using TechBlog.UI.Areas.Identity.Data
+
+
+@inject SignInManager<IdentifyUsingUser> SignInManager
+@inject UserManager<IdentifyUsingUser> UserManager
+
+<ul class="navbar-nav">
+    @if (SignInManager.IsSignedIn(User))
+    {
+
+        <li class="nav-item dropdown justify-content-center align-items-center" style="display: flex;">
+
+            <a id="manage" class="nav-link dropdown-toggle" id="navbarDarkDropdownMenuLink" 
+            role="button" data-bs-toggle="dropdown" aria-expanded="false" asp-area="Identity" 
+            asp-page="/Account/Manage/Index" title="Manage">@UserManager.GetUserName(User)</a>
+
+            <img src="../assets/img/default-avatar.png" alt="" style="width: 30px; height: 30px; border-radius: 50%" />
+            <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li class="dropdown-item">
+                    <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                        <button id="logout" type="submit" class="nav-link btn btn-link" style="font-size:14px;font-weight:800; color:#000">Logout</button>
+                    </form>
+                </li>
+            </ul>
+        </li>   
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        </li>
+    }
+</ul>

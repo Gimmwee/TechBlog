@@ -17,6 +17,14 @@ namespace TechBlog.Core.Repository.ImplementRepo
         {
 
         }
+
+        public IList<Tag> GetTagByName(string name)
+        {
+            return _context.Tags
+           .Where(p => p.Name.Contains(name))
+           .ToList();
+        }
+
         /// <summary>
         /// get tag by urlslug
         /// </summary>

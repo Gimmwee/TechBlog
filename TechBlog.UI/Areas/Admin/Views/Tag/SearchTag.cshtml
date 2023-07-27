@@ -1,0 +1,63 @@
+﻿@model IEnumerable<TechBlog.Core.Models.Tag>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_ActionLayout.cshtml";
+}
+
+<h2 style="font-weight:600">Search results for @ViewBag.SearchTerm</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}
+@if (Model.Any()) 
+{
+    <table class="table" style="font-size: 14px">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UrlSlug)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Count)
+                </th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UrlSlug)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Count)
+                    </td>
+                    <td style="white-space: nowrap">
+                        <a asp-action="Edit" asp-route-id="@item.TagId">Edit</a> |
+                        @Html.ActionLink("Details", "Details", new {  id=item.TagId  }) |
+                        @Html.ActionLink("Delete", "Delete",new {  id=item.TagId  }, new { onclick = "return confirm('Are you sure to delete this tag?');"})
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+

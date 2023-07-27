@@ -1,36 +1,70 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
-    Layout = "~/Views/Shared/_PostDetail.cshtml";
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @using TechBlog.Core.Models;
 @model Post;
 
-<header class="masthead" style="background-image: url('../assets/img/post-bg.jpg')">
-    <div class="container position-relative px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-md-10 col-lg-8 col-xl-7">
-                <div class="post-heading">
-                    <h1>@Model.Title</h1>
-                    <h2 class="subheading">@Model.ShortDescription</h2>
-                    <span class="meta">
-                        Posted on
-                        @Model.PostedOn
-                    </span>
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- Post content-->
+            <article>
+                <!-- Post header-->
+                <header class="mb-4">
+                    <!-- Post title-->
+                    <h1 class="fw-bolder mb-1">@Model.Title</h1>
+                    <!-- Post meta content-->
+                    <div class="text-muted fst-italic mb-2">Posted on @Model.PostedOn</div>
+                    <!-- Post categories-->
+                    @*<a class="badge bg-secondary text-decoration-none link-light" href="#!">@Model.Category.Name</a>*@
+                </header>
+                <!-- Preview image figure-->
+                <figure class="mb-4"><img class="img-fluid rounded" src="@Model.Image" alt="..." /></figure>
+                <!-- Post content-->
+                <section class="mb-5">
+                    <p class="fs-5 mb-4">@Model.PostContent</p>
+                    
+                </section>
+            </article>
+            <!-- Comments section-->
+            @Html.Partial("_ListCommentForPost")
+        </div>
+        <div class="col-lg-4">
+           
+            <!-- Search widget-->
+            <div class="card mb-4">
+                <div class="card-header" style="font:bold; font-size:30px">Search</div>
+                <div class="card-body">
+                    <form method="get" asp-controller="Post" asp-action="Search">
+                        <div class="input-group">
+                            <input name="searchTerm" class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
+                            <button class="btn btn-primary" id="button-search" type="submit">Go!</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div>
-    </div>
-</header>
-<!-- Post Content-->
-<article class="mb-4">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-md-10 col-lg-8 col-xl-7">
-                <p>@Model.PostContent</p>
-                
+
+            <!-- Categories widget-->
+            <div class="card mb-4">
+                <div class="card-header">Categories</div>
+                @Html.Partial("_CategoryMenu")
+            </div>
+            <div class="mb-4">
+
+                <hr />
+                <h3 style="display:block; margin: 30px 0 10px 0;">Popular Tags</h3>
+                @Html.Partial("_PopularTags")
+            </div>
+            <!-- Side widget-->
+            <div class="card mb-4">
+                <div class="card-header">Side Widget</div>
+                <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
             </div>
         </div>
+       
     </div>
-</article>
-<partial name="_ListCommentForPost" />
+</div>

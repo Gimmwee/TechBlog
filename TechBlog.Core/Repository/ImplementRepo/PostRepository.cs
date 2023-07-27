@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -60,7 +61,7 @@ namespace TechBlog.Core.Repository.ImplementRepo
         public IList<Post> GetPostsByCategory(string category)
         {
             return _context.Posts
-        .Where(p => p.Category.Name.ToLower() == category.ToLower())
+        .Where(p => p.Category.Name == category)
         .ToList();
         }
         /// <summary>
@@ -143,7 +144,45 @@ namespace TechBlog.Core.Repository.ImplementRepo
 
         public Post GetPosts(int id)
         {
-            return _context.Posts.FirstOrDefault(p => p.PostId == id);
+            return _context.Posts
+            .Include(p => p.Category)
+            .SingleOrDefault(p => p.PostId == id);
+        }
+
+        public Post GetLatedPost()
+        {
+            return _context.Posts.OrderByDescending(p => p.PostedOn).FirstOrDefault();
+        }
+
+        public IList<Post> GetPostsByTitle(string title)
+        {
+            return _context.Posts
+            .Where(p => p.Title.Contains(title))
+            .ToList();
+        }
+
+        public bool IsTitleDuplicate(string title)
+        {
+            // Check if there is any post with the given title
+            return _context.Posts.Any(p => p.Title == title);
+        }
+
+        public void Detach(Post post)
+        {
+            _context.Entry(post).State = EntityState.Detached;
+        }
+
+        public IList<Post> GetAllPosts()
+        {
+            return _context.Posts.Include(p => p.Category).ToList();
+        }
+
+        public IList<Post> GetPostsByCategoryId(int categoryId)
+        {
+            return _context.Posts
+            .Where(p => p.CategoryId == categoryId)
+            .ToList();
         }
     }
 }
+

@@ -1,5 +1,4 @@
-﻿
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
@@ -27,7 +26,7 @@ namespace TechBlog.UI.Areas.Admin.Controllers
             int pageSize = 5;
             int pageNumber = (page ?? 1);
 
-            var categories = _uow.Category.GetAll()
+            var categories = _uow.CategoryRepository.GetAll()
                                 .OrderByDescending(p => p.CategoryId)
                                 .Skip((pageNumber - 1) * pageSize)
                                 .Take(pageSize)
@@ -56,14 +55,14 @@ namespace TechBlog.UI.Areas.Admin.Controllers
         }
 
         // GET: CategoryController/Create
-        [Authorize(Roles = "Admin, Blog Owner, Contibutor")]
+        [Authorize(Roles = "Admin, Blog Owner, Contributor")]
         public ActionResult Create()
         {
             return View();
         }
 
         // POST: CategoryController/Create
-        [Authorize(Roles = "Admin, Blog Owner, Contibutor")]
+        [Authorize(Roles = "Admin, Blog Owner, Contributor")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Category categories)
@@ -78,7 +77,7 @@ namespace TechBlog.UI.Areas.Admin.Controllers
         }
 
         // GET: CategoryController/Edit/5
-        [Authorize(Roles = "Admin, Blog Owner, Contibutor")]
+        [Authorize(Roles = "Admin, Blog Owner, Contributor")]
         public ActionResult Edit(int? id)
         {
             if (id == null || id == 0)
@@ -97,7 +96,7 @@ namespace TechBlog.UI.Areas.Admin.Controllers
         }
 
         // POST: CategoryController/Edit/5
-        [Authorize(Roles = "Admin, Blog Owner, Contibutor")]
+        [Authorize(Roles = "Admin, Blog Owner, Contributor")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Category categories)
@@ -110,17 +109,96 @@ namespace TechBlog.UI.Areas.Admin.Controllers
 
         }
 
+        //// POST: CategoryController/Delete/5
+        //[Authorize(Roles = "Admin, Blog Owner")]
+        //public ActionResult Delete(int? id)
+        //{
+        //    //if (id.HasValue)
+        //    //{
+        //    //    var category = _uow.CategoryRepository.GetEntityById(id.Value);
+        //    //    if (category != null && !_uow.CategoryRepository.HasPosts(category))
+        //    //    {
+        //    //        _uow.CategoryRepository.Delete(id.Value);
+        //    //        _uow.SaveChange();
+        //    //    }
+        //    //    else
+        //    //    {
+        //    //       // ModelState.AddModelError("CategoryId", "This category cannot be removed because it contains posts!!");
+        //    //        TempData["Message"] = "This category cannot be removed because it contains posts!!";
+        //    //    }
+        //    //}
+        //    //return RedirectToAction("Index", "Category");
 
-        // POST: CategoryController/Delete/5
+        //}
         [Authorize(Roles = "Admin, Blog Owner")]
         public ActionResult Delete(int? id)
         {
             if (id.HasValue)
             {
-                _uow.CategoryRepository.Delete(id.Value);
+                var category = _uow.CategoryRepository.GetEntityById(id.Value);
+                if (category != null && _uow.CategoryRepository.HasPosts(category))
+                {
+                    TempData["CategoryId"] = id.Value;
+                    return RedirectToAction("DeleteConfirmed", "Category", new { id = id.Value });
+                }
+                else if (category != null)
+                {
+                    _uow.CategoryRepository.Delete(id.Value);
+                    _uow.SaveChange();
+                }
+            }
+            return RedirectToAction("Index", "Category");
+        }
+
+        [Authorize(Roles = "Admin, Blog Owner")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteWithPosts(int id)
+        {
+            var category = _uow.CategoryRepository.GetEntityById(id);
+            if (category != null)
+            {
+                // Delete all the posts associated with the category
+                var posts = _uow.PostRepository.GetPostsByCategoryId(id);
+                foreach (var post in posts)
+                {
+                    _uow.PostRepository.Delete(post.PostId);
+                }
+
+                // Now delete the category
+                _uow.CategoryRepository.Delete(id);
                 _uow.SaveChange();
             }
             return RedirectToAction("Index", "Category");
         }
+
+        public IActionResult SearchCategory(string? searchTerm)
+        {
+
+            var categories = _uow.CategoryRepository.GetCategoryByName(searchTerm);
+            ViewBag.SearchTerm = searchTerm;
+            if (!categories.Any())
+            {
+                ViewBag.Message = "Không tim thấy \"" + searchTerm + "\".";
+            }
+            return View(categories);
+        }
+
+      
+        [Authorize(Roles = "Admin, Blog Owner")]
+        public ActionResult DeleteConfirmed(int? id)
+        {
+            if (id.HasValue)
+            {
+                var category = _uow.CategoryRepository.GetEntityById(id.Value);
+                if (category != null)
+                {
+                    return View(category);
+                }
+            }
+            return RedirectToAction("Index", "Category");
+        }
+
+
     }
 }

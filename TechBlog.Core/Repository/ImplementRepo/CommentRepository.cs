@@ -33,6 +33,14 @@ namespace TechBlog.Core.Repository.ImplementRepo
             _context.Add(comment);
             _context.SaveChanges();
         }
+
+        public IList<Comment> GetCommentsByName(string name)
+        {
+            return _context.Comments
+           .Where(p => p.Name.Contains(name))
+           .ToList();
+        }
+
         /// <summary>
         /// get comments for post
         /// </summary>
@@ -50,6 +58,20 @@ namespace TechBlog.Core.Repository.ImplementRepo
         public IList<Comment> GetCommentsForPost(Post post)
         {
             return post.Comments.ToList();
+        }
+
+        public IList<Comment> GetCommentsPublish()
+        {
+            return _context.Comments
+        .Where(p => p.Published == true)
+        .ToList();
+        }
+
+        public IList<Comment> GetCommentsPublishForPost(int postId)
+        {
+            return _context.Comments
+        .Where(p => p.Published == true).Where(p => p.PostId == postId)
+        .ToList();
         }
     }
 }

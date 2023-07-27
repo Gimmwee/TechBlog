@@ -11,7 +11,7 @@ namespace TechBlog.UI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Tag/{action}")]
-    [Authorize(Roles = "Admin, Blog Owner, Contibutor")]
+    [Authorize(Roles = "Admin, Blog Owner, Contributor")]
     public class TagController : Controller
     {
         private readonly IUnitOfWork _uow;
@@ -54,14 +54,14 @@ namespace TechBlog.UI.Areas.Admin.Controllers
         }
 
         // GET: TagController/Create
-        [Authorize(Roles = "Admin, Blog Owner, Contibutor")]
+        [Authorize(Roles = "Admin, Blog Owner, Contributor")]
         public ActionResult Create()
         {
             return View();
         }
 
         // POST: TagController/Create
-        [Authorize(Roles = "Admin, Blog Owner, Contibutor")]
+        [Authorize(Roles = "Admin, Blog Owner, Contributor")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Tag tags)
@@ -75,7 +75,7 @@ namespace TechBlog.UI.Areas.Admin.Controllers
         }
 
         // GET: TagController/Edit/5
-        [Authorize(Roles = "Admin, Blog Owner, Contibutor")]
+        [Authorize(Roles = "Admin, Blog Owner, Contributor")]
         public ActionResult Edit(int? id)
         {
             if (id == null || id == 0)
@@ -94,7 +94,7 @@ namespace TechBlog.UI.Areas.Admin.Controllers
         }
 
         // POST: TagController/Edit/5
-        [Authorize(Roles = "Admin, Blog Owner, Contibutor")]
+        [Authorize(Roles = "Admin, Blog Owner, Contributor")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Tag tags)
@@ -116,6 +116,18 @@ namespace TechBlog.UI.Areas.Admin.Controllers
                 _uow.SaveChange();
             }
             return RedirectToAction("Index", "Category");
+        }
+
+        public IActionResult SearchTag(string? searchTerm)
+        {
+
+            var tags = _uow.TagRepository.GetTagByName(searchTerm);
+            ViewBag.SearchTerm = searchTerm;
+            if (!tags.Any())
+            {
+                ViewBag.Message = "Không tim thấy \"" + searchTerm + "\".";
+            }
+            return View(tags);
         }
     }
 }

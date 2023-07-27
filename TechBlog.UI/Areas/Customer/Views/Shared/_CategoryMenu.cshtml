@@ -1,0 +1,19 @@
+﻿@using TechBlog.Core.Models
+@using TechBlog.Core.Repository.UnitOfWork
+@inject IUnitOfWork uow
+@{
+    IEnumerable<Category> categories = uow.CategoryRepository.GetAll();
+}
+
+
+<div class="card-body">
+    <div class="row">
+        <div class="col-sm-6 w-100">
+            @foreach (var item in categories)
+            {
+                <a href="/Post/PostByCategory?category=@item.Name">@item.Name</a>
+                <span>&nbsp&nbsp</span>
+            }
+        </div>
+    </div>
+</div>

@@ -26,6 +26,13 @@
 			<input asp-for="@Model.Email" rows="3" class="form-control"/>
 			<span asp-validation-for="@Model.Email" class="text-danger"></span>
 		</div>
+		 <div class="mb-3">
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Published" /> @Html.DisplayNameFor(model => model.Published)
+                </label>
+            </div>
+        </div>
 		<div class="mb-3">
 			<label asp-for="PostId" class="control-label">Posts Name</label>
 			<select asp-for="PostId" asp-items="list" class="form-control"></select>

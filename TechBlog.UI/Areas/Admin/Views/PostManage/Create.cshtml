@@ -16,6 +16,12 @@
             <h4 class="text-dark">Create</h4>
             <hr />
         </div>
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @TempData["Message"]
+            </div>
+        }
         <div asp-validation-summary="All" class="text-danger"></div>
         <div class="mb-3">
             <label asp-for="@Model.Title"></label>
@@ -23,47 +29,51 @@
         </div>
         <div class="mb-3">
             <label asp-for="@Model.ShortDescription"></label>
-            <textarea  asp-for="@Model.ShortDescription" rows="3" class="form-control"></textarea>
+            <textarea asp-for="@Model.ShortDescription" rows="3" class="form-control"></textarea>
             <span asp-validation-for="@Model.ShortDescription" class="text-danger"></span>
         </div>
         <div class="mb-3">
-            <div class="form-group">
-                <label asp-for="PostContent" class="control-label"></label>
-                @Html.TextAreaFor(Model => Model.PostContent, new {@id = "FullDescription",
-                @class = "form-control" , @rows = "200"})
-                @* <textarea asp-for="PostContent" class="form-control"></textarea>*@
-                <span asp-validation-for="PostContent" class="text-danger"></span>
+            <label asp-for="@Model.Image">Image URL</label>
+            <input type="text" asp-for="@Model.Image" class="form-control" />
             </div>
-        </div>
-        <div class="mb-3">
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Published" /> @Html.DisplayNameFor(model => model.Published)
-                </label>
+            <div class="mb-3">
+                <div class="form-group">
+                    <label asp-for="PostContent" class="control-label"></label>
+                        @Html.TextAreaFor(Model => Model.PostContent, new {@id = "FullDescription",
+                    @class = "form-control" , @rows = "200"})
+                        @* <textarea asp-for="PostContent" class="form-control"></textarea>*@
+                    <span asp-validation-for="PostContent" class="text-danger"></span>
+                </div>
             </div>
-        </div>
-        <div class="mb-3">
-            <label asp-for="@Model.ViewCount"></label>
-            <input type="number" asp-for="@Model.ViewCount" rows="3" class="form-control" />
-        </div>
-        <div class="mb-3">
-            <label asp-for="@Model.RateCount"></label>
-            <input type="number" asp-for="@Model.RateCount" rows="3" class="form-control" />
-        </div>
-        <div class="mb-3">
-            <label asp-for="@Model.TotalRate"></label>
-            <input type="number" asp-for="@Model.TotalRate" rows="3" class="form-control" />
-        </div>
-        <div class="mb-3">
-            <label asp-for="CategoryId" class="control-label">Categories</label>
-            <select asp-for="CategoryId" asp-items="list" class="form-control"></select>
-            <span asp-validation-for="CategoryId" class="text-danger"></span>
+            <div class="mb-3">
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="Published" /> @Html.DisplayNameFor(model => model.Published)
+                    </label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label asp-for="@Model.ViewCount"></label>
+                <input type="number" asp-for="@Model.ViewCount" rows="3" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="@Model.RateCount"></label>
+                <input type="number" asp-for="@Model.RateCount" rows="3" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="@Model.TotalRate"></label>
+                <input type="number" asp-for="@Model.TotalRate" rows="3" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="CategoryId" class="control-label">Categories</label>
+                <select asp-for="CategoryId" asp-items="list" class="form-control"></select>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
 
+            </div>
+            <button type="submit" class="btn btn-dark" style="width:150px">Create</button>
+            <a asp-controller="PostManage" asp-action="Index" class="btn btn-outline-dark" style="width:150px">
+                Back to list
+            </a>
         </div>
-        <button type="submit" class="btn btn-dark" style="width:150px">Create</button>
-        <a asp-controller="PostManage" asp-action="Index" class="btn btn-outline-dark" style="width:150px">
-            Back to list
-        </a>
-    </div>
 </form>
 <script>CKEDITOR.replace("FullDescription");</script>

@@ -150,6 +150,9 @@ namespace TechBlog.Core.Migrations
                     b.Property<int>("PostId")
                         .HasColumnType("int");
 
+                    b.Property<bool>("Published")
+                        .HasColumnType("bit");
+
                     b.HasKey("CommentId");
 
                     b.HasIndex("PostId");
@@ -162,130 +165,143 @@ namespace TechBlog.Core.Migrations
                             CommentId = 1,
                             CommentHeader = "Great article!",
                             CommentText = "This article provided a lot of useful information. I learned a lot from it. Thank you!",
-                            CommentTime = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2245),
+                            CommentTime = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1607),
                             Email = "john.smith@example.com",
                             Name = "John Smith",
-                            PostId = 1
+                            PostId = 1,
+                            Published = false
                         },
                         new
                         {
                             CommentId = 13,
                             CommentHeader = "Interesting perspective!",
                             CommentText = "I never thought about the topic from this angle before. Your article gave me a lot to think about. Thanks for sharing!",
-                            CommentTime = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2246),
+                            CommentTime = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1608),
                             Email = "jane.doe@example.com",
                             Name = "KienDc",
-                            PostId = 3
+                            PostId = 3,
+                            Published = false
                         },
                         new
                         {
                             CommentId = 12,
                             CommentHeader = "Question about the topic",
                             CommentText = "I have a question about one of the points you made in the article. Can you provide more information about XYZ? Thanks!",
-                            CommentTime = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2247),
+                            CommentTime = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1609),
                             Email = "SonPP@example.com",
                             Name = "Son PP",
-                            PostId = 2
+                            PostId = 2,
+                            Published = false
                         },
                         new
                         {
                             CommentId = 14,
                             CommentHeader = "Great article!",
                             CommentText = "This article provided a lot of useful information. I learned a lot from it. Thank you!",
-                            CommentTime = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2249),
+                            CommentTime = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1610),
                             Email = "john.smith@example.com",
                             Name = "John Smith",
-                            PostId = 2
+                            PostId = 2,
+                            Published = false
                         },
                         new
                         {
                             CommentId = 2,
                             CommentHeader = "Excellent post!",
                             CommentText = "I really enjoyed reading this post. The examples were very helpful.",
-                            CommentTime = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2250),
+                            CommentTime = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1611),
                             Email = "emily.jones@example.com",
                             Name = "Emily Jones",
-                            PostId = 2
+                            PostId = 2,
+                            Published = false
                         },
                         new
                         {
                             CommentId = 3,
                             CommentHeader = "Thanks for sharing",
                             CommentText = "This post helped me understand machine learning better. Keep up the good work!",
-                            CommentTime = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2251),
+                            CommentTime = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1612),
                             Email = "david.lee@example.com",
                             Name = "David Lee",
-                            PostId = 2
+                            PostId = 2,
+                            Published = false
                         },
                         new
                         {
                             CommentId = 4,
                             CommentHeader = "Insightful article",
                             CommentText = "I learned a lot from this post. Thank you for sharing your knowledge with us.",
-                            CommentTime = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2252),
+                            CommentTime = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1613),
                             Email = "sarah.johnson@example.com",
                             Name = "Sarah Johnson",
-                            PostId = 1
+                            PostId = 1,
+                            Published = false
                         },
                         new
                         {
                             CommentId = 5,
                             CommentHeader = "Well-written post",
                             CommentText = "This post was easy to read and understand. The examples were very helpful.",
-                            CommentTime = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2253),
+                            CommentTime = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1614),
                             Email = "michael.brown@example.com",
                             Name = "Michael Brown",
-                            PostId = 5
+                            PostId = 5,
+                            Published = false
                         },
                         new
                         {
                             CommentId = 6,
                             CommentHeader = "Thank you for this post",
                             CommentText = "I was struggling to understand machine learning before reading this post. It has helped me a lot.",
-                            CommentTime = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2254),
+                            CommentTime = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1614),
                             Email = "linda.davis@example.com",
                             Name = "Linda Davis",
-                            PostId = 4
+                            PostId = 4,
+                            Published = false
                         },
                         new
                         {
                             CommentId = 7,
                             CommentHeader = "Great job!",
                             CommentText = "This post was very informative. I learned a lot from it.",
-                            CommentTime = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2255),
+                            CommentTime = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1615),
                             Email = "tom.smith@example.com",
                             Name = "Tom Smith",
-                            PostId = 3
+                            PostId = 3,
+                            Published = false
                         },
                         new
                         {
                             CommentId = 8,
                             CommentHeader = "Thanks for sharing your knowledge",
                             CommentText = "This post was well-written and very informative. I appreciate you sharing your knowledge with us.",
-                            CommentTime = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2256),
+                            CommentTime = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1616),
                             Email = "katie.lee@example.com",
                             Name = "Katie Lee",
-                            PostId = 2
+                            PostId = 2,
+                            Published = false
                         },
                         new
                         {
                             CommentId = 9,
                             CommentHeader = "Very helpful post",
                             CommentText = "I was looking for an introduction to machine learning and this post was exactly what I needed. Thank you!",
-                            CommentTime = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2256),
+                            CommentTime = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1617),
                             Email = "peter.johnson@example.com",
                             Name = "Peter Johnson",
-                            PostId = 1
+                            PostId = 1,
+                            Published = false
                         },
                         new
                         {
                             CommentId = 10,
                             CommentHeader = "Thanks for the explanation",
                             CommentText = "This post explained machine learning in a way that was easy to understand. I appreciate it!",
-                            CommentTime = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2257),
+                            CommentTime = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1618),
                             Email = "amanda.brown@example.com",
                             Name = "Amanda Brown",
-                            PostId = 2
+                            PostId = 2,
+                            Published = false
                         });
                 });
 
@@ -332,7 +348,6 @@ namespace TechBlog.Core.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UrlSlug")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ViewCount")
@@ -350,9 +365,9 @@ namespace TechBlog.Core.Migrations
                             PostId = 1,
                             CategoryId = 1,
                             Image = "https://images.techeblog.com/wp-content/uploads/2023/07/09135001/god-of-war-ragnarok-demake-ps1.jpg",
-                            Modified = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2185),
+                            Modified = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1552),
                             PostContent = "The finance ministers and central bank governors of the Association of Southeast Asian Nations (ASEAN) held a meeting on March 30-31 in Bali, Indonesia. One of the topics they discussed was reducing reliance on western currencies, such as the U.S. dollar. ASEAN comprises Brunei, Cambodia, Indonesia, Laos, Malaysia, Myanmar, the Philippines, Singapore, Thailand, and Vietnam.\r\n\r\nThe meeting was also attended by representatives from six international\r\norganizations, namely Asian Development Bank (ADB), ASEAN+3 Macroeconomic Research Office (AMRO), the International Monetary Fund (IMF), the Financial Supervisory Board (FSB), the Bank for International Settlement (BIS), and the World Bank.\r\n\r\nAt the conclusion of the two-day meeting, the ASEAN finance ministers and central bank governors released a joint statement, stating that they agreed to “reinforce financial resilience, among others, through the use of local currency to support cross-border trade and investment in the ASEAN region.”",
-                            PostedOn = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2171),
+                            PostedOn = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1538),
                             Published = true,
                             RateCount = 2,
                             ShortDescription = "The finance ministers and central bank governors of the Association of Southeast Asian Nations (ASEAN) are exploring ways to decrease their countries’ dependence on the U.S. dollar and promote the use of local currencies in trade settlements. “We must remember the sanctions imposed by the US on Russia,” said Indonesian President Joko Widodo.",
@@ -366,9 +381,9 @@ namespace TechBlog.Core.Migrations
                             PostId = 2,
                             CategoryId = 2,
                             Image = "https://images.techeblog.com/wp-content/uploads/2023/07/09130532/kasa-smart-plug-hs103p4-smart-home-wifi-outlet.jpg",
-                            Modified = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2192),
+                            Modified = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1555),
                             PostContent = "According to Amboko Julians, a Kenyan economist and blogger, the East African nation’s parliament is set to debate a bill that proposes to place blockchain technology and digital currencies under the purview of Kenya’s Capital Markets Authority (CMA). Besides seeking to incorporate the definitions of blockchain and cryptocurrencies, Julians claimed that the bill also proposes “to widen the meaning of ‘securities’ to capture digital currencies.”\r\n\r\nIn his March 28 Twitter thread, Julians shared the supposed screenshots of the bill that is being sponsored by the Kenyan legislator Abraham Kipsang Kirwa. As shown in the screenshots, Kirwa’s bill proposes that persons seeking to introduce a cryptocurrency must first obtain a license from the capital markets regulator.",
-                            PostedOn = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2191),
+                            PostedOn = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1554),
                             Published = true,
                             RateCount = 23,
                             ShortDescription = "A bill seeking to put blockchain and crypto assets under the purview of the Kenyan Capital Markets Authority is supposedly set to be debated in the country’s parliament. The bill also seeks to “widen the meaning of ‘securities’ to capture digital currencies.” The persons that receive licenses from the regulator are also required to maintain records of all digital currency transactions and to pay taxes on any gains made.",
@@ -382,9 +397,9 @@ namespace TechBlog.Core.Migrations
                             PostId = 3,
                             CategoryId = 3,
                             Image = "https://images.techeblog.com/wp-content/uploads/2023/07/09122748/smart-soft-robotic-glove-relearn-piano-strokes.jpg",
-                            Modified = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2193),
+                            Modified = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1557),
                             PostContent = "Time management is an essential skill for success in both personal and professional life. In this article, we will share 10 tips for better time management, including setting goals, prioritizing tasks, minimizing distractions, and delegating responsibilities. By following these tips, you can improve your productivity, reduce stress, and achieve your goals more efficiently.",
-                            PostedOn = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2193),
+                            PostedOn = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1556),
                             Published = false,
                             RateCount = 22,
                             ShortDescription = "Learn how to manage your time more effectively with these 10 simple tips.",
@@ -398,9 +413,9 @@ namespace TechBlog.Core.Migrations
                             PostId = 4,
                             CategoryId = 4,
                             Image = "https://images.techeblog.com/wp-content/uploads/2023/07/09122748/smart-soft-robotic-glove-relearn-piano-strokes.jpg",
-                            Modified = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2195),
+                            Modified = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1558),
                             PostContent = "Xuan Changneng, a deputy governor at the People’s Bank of China (PBOC), the Chinese central bank, spoke at the Boao Forum on Friday about the potential dangers of financial innovations, including cryptocurrencies, that could cause banks and lenders to fail. He was quoted by Bloomberg as saying:\r\n\r\nRisks and fraud associated with cryptocurrency, including the two American banks who ran into troubles after providing many services for cryptocurrency from taking deposits to settlement, showed that regulators should respect rules when innovating regulation.",
-                            PostedOn = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2195),
+                            PostedOn = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1558),
                             Published = true,
                             RateCount = 33,
                             ShortDescription = "A senior People’s Bank of China (PBOC) official has urged regulators to consider cryptocurrency risks and fraud that could lead to bank failures when innovating regulation. ",
@@ -414,9 +429,9 @@ namespace TechBlog.Core.Migrations
                             PostId = 5,
                             CategoryId = 5,
                             Image = "https://images.techeblog.com/wp-content/uploads/2023/07/09085915/apple-car-audio-system-patent-leak.jpg",
-                            Modified = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2197),
+                            Modified = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1560),
                             PostContent = "React Native is a popular framework for building native mobile apps using JavaScript and React. In this tutorial, we will cover the basics of React Native, including components, styling, navigation, and data management. By the end of this tutorial, you will have a working mobile app that you can deploy on both iOS and Android devices.",
-                            PostedOn = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2196),
+                            PostedOn = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1559),
                             Published = true,
                             RateCount = 11,
                             ShortDescription = "Learn how to build a mobile app using React Native framework.",
@@ -430,9 +445,9 @@ namespace TechBlog.Core.Migrations
                             PostId = 6,
                             CategoryId = 6,
                             Image = "https://images.techeblog.com/wp-content/uploads/2023/07/09000959/nasa-valkyrie-humanoid-robot-australia-testing.jpg",
-                            Modified = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2199),
+                            Modified = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1561),
                             PostContent = "Starting a blog is a great way to express your creativity, share your knowledge, and connect with like-minded people. In this tutorial, we will cover the basics of starting a blog, including choosing a niche, selecting a platform, setting up your website, and creating content. Whether you want to blog for fun or profit, this tutorial will help you get started.",
-                            PostedOn = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2199),
+                            PostedOn = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1561),
                             Published = true,
                             RateCount = 44,
                             ShortDescription = "Learn how to start a blog and share your ideas with the world.",
@@ -446,9 +461,9 @@ namespace TechBlog.Core.Migrations
                             PostId = 7,
                             CategoryId = 7,
                             Image = "https://images.techeblog.com/wp-content/uploads/2023/07/08224546/project-e-ink-front-page-new-york-times.jpg",
-                            Modified = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2201),
+                            Modified = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1564),
                             PostContent = "Git is a popular version control system that is widely used in software development to manage changes to source code. GitHub is a web-based platform that provides hosting for Git repositories and a range of collaboration features. In this tutorial, we will cover the basics of Git and GitHub, including creating repositories, branching, merging, and pull requests. By the end of this tutorial, you will be able to use Git and GitHub to manage your own projects and collaborate with others.",
-                            PostedOn = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2201),
+                            PostedOn = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1563),
                             Published = true,
                             RateCount = 32,
                             ShortDescription = "Learn how to use Git and GitHub for version control and collaboration.",
@@ -462,9 +477,9 @@ namespace TechBlog.Core.Migrations
                             PostId = 8,
                             CategoryId = 8,
                             Image = "https://images.techeblog.com/wp-content/uploads/2023/07/08202426/pokemon-sleep-ios-android-release.jpg",
-                            Modified = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2203),
+                            Modified = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1565),
                             PostContent = "Yoga is a mind-body practice that has been around for thousands of years. It involves physical postures, breathing techniques, and meditation or relaxation. Regular practice of yoga has been shown to improve flexibility, strength, balance, and reduce stress and anxiety. In this article, we will discuss the benefits of yoga and how you can incorporate it into your daily routine.",
-                            PostedOn = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2202),
+                            PostedOn = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1565),
                             Published = true,
                             RateCount = 32,
                             ShortDescription = "Learn about the physical and mental benefits of practicing yoga regularly.",
@@ -478,9 +493,9 @@ namespace TechBlog.Core.Migrations
                             PostId = 9,
                             CategoryId = 9,
                             Image = "https://images.techeblog.com/wp-content/uploads/2023/07/08191929/prime-deal-3rd-gen-echo-show-5.jpg",
-                            Modified = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2204),
+                            Modified = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1567),
                             PostContent = "Starting a successful business requires careful planning, research, and execution. In this article, we will cover the key steps to starting a successful business, including identifying a profitable niche, conducting market research, developing a business plan, and marketing your business. We will also discuss some common challenges and how to overcome them.",
-                            PostedOn = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2204),
+                            PostedOn = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1566),
                             Published = true,
                             RateCount = 41,
                             ShortDescription = "Learn the key steps to starting and growing a successful business.",
@@ -494,9 +509,9 @@ namespace TechBlog.Core.Migrations
                             PostId = 10,
                             CategoryId = 10,
                             Image = "https://images.techeblog.com/wp-content/uploads/2023/07/08134634/james-webb-space-telescope-most-distant-active-supermassive-black-hole-ceers-1019.jpg",
-                            Modified = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2206),
+                            Modified = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1568),
                             PostContent = "Self-care is the practice of taking care of oneself to maintain physical, mental, and emotional health. It involves activities such as eating healthy, getting enough sleep, exercising regularly, and engaging in activities that bring joy and relaxation. In this article, we will discuss the importance of self-care and provide tips for how to practice it.",
-                            PostedOn = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2205),
+                            PostedOn = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1568),
                             Published = true,
                             RateCount = 23,
                             ShortDescription = "Learn why self-care is essential for overall well-being and how to practice it.",
@@ -510,9 +525,9 @@ namespace TechBlog.Core.Migrations
                             PostId = 11,
                             CategoryId = 2,
                             Image = "https://www.techeblog.com/wp-content/uploads/2023/04/hubble-space-telescope-runaway-black-hole-star-trail.jpg",
-                            Modified = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2207),
+                            Modified = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1570),
                             PostContent = "Learning a new language can be challenging, but it can also be a rewarding and enriching experience. In this article, we will discuss effective strategies for learning a new language, including setting realistic goals, practicing regularly, immersing yourself in the language, and using language learning apps and resources.",
-                            PostedOn = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2207),
+                            PostedOn = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1569),
                             Published = true,
                             RateCount = 12,
                             ShortDescription = "Learn effective strategies for learning a new language, whether for travel or personal growth.",
@@ -526,9 +541,9 @@ namespace TechBlog.Core.Migrations
                             PostId = 12,
                             CategoryId = 2,
                             Image = "https://www.techeblog.com/wp-content/uploads/2023/01/hubble-space-telescope-scattered-stars-globular-cluster-ngc-6355.jpg",
-                            Modified = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2209),
+                            Modified = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1571),
                             PostContent = "Mindfulness meditation is a practice that involves focusing your attention on the present moment, without judgment. It has been shown to reduce stress, anxiety, and depression, as well as improve overall well-being. In this article, we will discuss the benefits of mindfulness meditation and provide tips for how to incorporate it into your daily routine.",
-                            PostedOn = new DateTime(2023, 7, 10, 21, 48, 52, 271, DateTimeKind.Local).AddTicks(2208),
+                            PostedOn = new DateTime(2023, 7, 26, 9, 32, 41, 314, DateTimeKind.Local).AddTicks(1571),
                             Published = true,
                             RateCount = 23,
                             ShortDescription = "Learn about the benefits of mindfulness meditation and how to incorporate it into your daily routine.",

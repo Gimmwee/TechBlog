@@ -17,6 +17,17 @@ namespace TechBlog.Core.Repository.ImplementRepo
         {
         }
 
-       
+        public IList<Category> GetCategoryByName(string name)
+        {
+            return _context.Categories
+            .Where(p => p.Name.Contains(name))
+            .ToList();
+        }
+
+        public bool HasPosts(Category category)
+        {
+            // Kiểm tra xem danh mục có bài viết nào hay không
+            return _context.Set<Post>().Any(p => p.CategoryId == category.CategoryId);
+        }
     }
 }

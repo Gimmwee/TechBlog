@@ -15,6 +15,7 @@ namespace TechBlog.Core.Models
         public string CommentHeader { get; set; }
         public string CommentText { get; set; }
         public DateTime CommentTime { get; set; }
+        public bool Published { get; set; }
 
         public Post Post { get; set; }
     }

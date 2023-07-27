@@ -15,5 +15,8 @@ namespace TechBlog.Core.Repository.IRepository
         void AddComment(int postId, string commentName, string commentEmail, string commentTitle, string commentBody);
         IList<Comment> GetCommentsForPost(int postId);
         IList<Comment> GetCommentsForPost(Post post);
+        IList<Comment> GetCommentsByName(string name);
+        IList<Comment> GetCommentsPublish();
+        IList<Comment> GetCommentsPublishForPost(int postId);
     }
 }

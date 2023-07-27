@@ -7,114 +7,110 @@
 @using TechBlog.Core.Repository.UnitOfWork;
 @model IEnumerable<Post>;
 
+
 <!-- Page content-->
 <div class="container">
     <div class="row">
         <!-- Blog entries-->
         <div class="col-lg-8">
             <!-- Featured blog post-->
-            <div class="card mb-4">
-                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                <div class="card-body">
-                    <div class="small text-muted">January 1, 2023</div>
-                    <h2 class="card-title">Featured Post Title</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-                    <a class="btn btn-primary" href="#!">Read more →</a>
+            @if (Model.Any())
+            {
+                var newestPost = Model.OrderByDescending(p => p.PostedOn).FirstOrDefault();
+
+                <div class="card mb-4">
+                    <a href="Details?id=@newestPost.PostId"><img class="card-img-top" src="@newestPost.Image" alt="Newest Post Img" /></a>
+                    <div class="card-body">
+                        <div class="small text-muted">@newestPost.PostedOn?.ToString("MMMM dd, yyyy")</div>
+                        <h2 class="card-title h4">@newestPost.Title</h2>
+                        <p class="card-text">@newestPost.ShortDescription</p>
+                        <p class="card-text">Rate @newestPost.Rate.ToString("#.##") by @newestPost.ViewCount</p>
+                        <a class="btn btn-primary" href="Details?id=@newestPost.PostId">Read more →</a>
+                    </div>
                 </div>
-            </div>
+            }
             <!-- Nested row for non-featured blog posts-->
             <div class="row">
-                @if (Model.Count() > 0) 
+                @if (Model.Count() > 0)
                 {
                     @foreach (var item in Model)
                     {
                         <div class="col-lg-6">
                             <!-- Blog post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="@item.Image" alt="Post Img" /></a>
+                                <a href="Details?id=@item.PostId"><img class="card-img-top" src="@item.Image" alt="Post Img" /></a>
                                 <div class="card-body">
                                     <div class="small text-muted">@item.PostedOn</div>
                                     <h2 class="card-title h4">@item.Title</h2>
                                     <p class="card-text">@item.ShortDescription</p>
                                     <p class="card-text">Rate @item.Rate.ToString("#.##") by @item.ViewCount</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
+                                    <a class="btn btn-primary" href="Details?id=@item.PostId">Read more →</a>
                                 </div>
                             </div>
-                            
+
                         </div>
                     }
                 }
-                
-                @*<div class="col-lg-6">
-                    <!-- Blog post-->
-                    <div class="card mb-4">
-                        <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                        <div class="card-body">
-                            <div class="small text-muted">January 1, 2023</div>
-                            <h2 class="card-title h4">Post Title</h2>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                            <a class="btn btn-primary" href="#!">Read more →</a>
-                        </div>
-                    </div>
-                    <!-- Blog post-->
-                    <div class="card mb-4">
-                        <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                        <div class="card-body">
-                            <div class="small text-muted">January 1, 2023</div>
-                            <h2 class="card-title h4">Post Title</h2>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.</p>
-                            <a class="btn btn-primary" href="#!">Read more →</a>
-                        </div>
-                    </div>
-                </div>*@
             </div>
             <!-- Pagination-->
-            <nav aria-label="Pagination">
-                <hr class="my-0" />
-                <ul class="pagination justify-content-center my-4">
-                    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
-                    <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#!">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#!">3</a></li>
-                    <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
-                    <li class="page-item"><a class="page-link" href="#!">15</a></li>
-                    <li class="page-item"><a class="page-link" href="#!">Older</a></li>
-                </ul>
-            </nav>
+            <div class="d-flex justify-content-center">
+                <nav aria-label="Page navigation text-center">
+                    <ul class="pagination">
+                        @if (ViewBag.PageNumber > 1)
+                        {
+                            <li class="page-item">
+                                <a href="/Post/Index?page=1" class="page-link">&lt&lt</a>
+                            </li>
+                        }
+
+                        @for (int i = 1; i <= Math.Ceiling((decimal)ViewBag.TotalRecords / ViewBag.PageSize); i++)
+                        {
+                            <li class="page-item @(ViewBag.PageNumber == i ? "active" : "")">
+                                <a href="/Post/Index?page=@i" class="page-link">@i</a>
+                            </li>
+                        }
+
+                        @if (ViewBag.PageNumber < Math.Ceiling((decimal)ViewBag.TotalRecords / ViewBag.PageSize))
+                        {
+                            <li class="page-item">
+                                @*<a href="@Url.Action("Index", "Post",new { page = Math.Ceiling((decimal)ViewBag.TotalRecords / ViewBag.PageSize) })" class="page-link">>></a>*@
+                                <a href="/Post/Index?page=@Math.Ceiling((decimal)ViewBag.TotalRecords / ViewBag.PageSize)" class="page-link">>></a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
         </div>
         <!-- Side widgets-->
         <div class="col-lg-4">
             <!-- Search widget-->
+            <!-- Search widget-->
             <div class="card mb-4">
-                <div class="card-header">Search</div>
+                <div class="card-header" style="font:bold; font-size:30px">Search</div>
                 <div class="card-body">
-                    <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
-                        <button class="btn btn-primary" id="button-search" type="button">Go!</button>
-                    </div>
+                    <form method="get" asp-controller="Post" asp-action="Search">
+                        <div class="input-group">
+                            <input name="searchTerm" class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
+                            <button class="btn btn-primary" id="button-search" type="submit">Go!</button>
+                        </div>
+                    </form>
                 </div>
             </div>
+
             <!-- Categories widget-->
             <div class="card mb-4">
                 <div class="card-header">Categories</div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <ul class="list-unstyled mb-0">
-                                <li><a href="#!">Web Design</a></li>
-                                <li><a href="#!">HTML</a></li>
-                                <li><a href="#!">Freebies</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6">
-                            <ul class="list-unstyled mb-0">
-                                <li><a href="#!">JavaScript</a></li>
-                                <li><a href="#!">CSS</a></li>
-                                <li><a href="#!">Tutorials</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                @Html.Partial("_CategoryMenu")
+            </div>
+            <div class="mb-4">
+                <h3 style="display:block; margin: 30px 0 10px 0;">Most View Posts</h3>
+                @Html.Partial("_ListPostsForMostView")
+                <hr />
+                <h3 style="display:block; margin: 30px 0 10px 0;">Lasted Posts</h3>
+                @Html.Partial("_ListPostsForLated")
+                <hr />
+                <h3 style="display:block; margin: 30px 0 10px 0;">Popular Tags</h3>
+                @Html.Partial("_PopularTags")
             </div>
             <!-- Side widget-->
             <div class="card mb-4">

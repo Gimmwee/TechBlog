@@ -1,4 +1,4 @@
-﻿using FA.JustBlog.UI.Areas.Identity.Data;
+﻿using TechBlog.UI.Areas.Identity.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
 
-namespace FA.JustBlog.UI.Areas.Identity.Pages.Role
+namespace TechBlog.UI.Areas.Identity.Pages.Role
 {
-    [Authorize(Roles = "Admin, Blog Owner, Contibutor")]
+    //[Authorize(Roles = "Admin, Blog Owner, Contributor")]
     public class UserModel : PageModel
     {
         const int USER_PER_PAGE = 10;

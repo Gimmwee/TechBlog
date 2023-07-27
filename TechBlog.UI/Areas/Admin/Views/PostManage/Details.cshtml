@@ -14,6 +14,18 @@
             <h4 class="text-dark">Create</h4>
             <hr />
         </div>
+        <div class="mb-3">
+            <label asp-for="@Model.Image">Image</label>
+            <br />
+            @if (!string.IsNullOrEmpty(Model.Image))
+            {
+                <img src="@Model.Image" alt="Image" style="max-width: 300px; max-height: 300px;" />
+            }
+            else
+            {
+                <p>No image available</p>
+            }
+        </div>
         <div asp-validation-summary="All" class="text-danger"></div>
         <div class="mb-3">
             <label asp-for="@Model.Title"></label>
@@ -52,15 +64,15 @@
         </div>
         <div class="mb-3">
             <label asp-for="@Model.RateCount"></label>
-            <input  type="number" asp-for="@Model.RateCount" rows="3" class="form-control" disabled />
+            <input type="number" asp-for="@Model.RateCount" rows="3" class="form-control" disabled />
         </div>
         <div class="mb-3">
             <label asp-for="@Model.TotalRate"></label>
             <input type="number" asp-for="@Model.TotalRate" rows="3" class="form-control" disabled />
         </div>
         <div class="mb-3">
-            <label asp-for="@Model.CategoryId"></label>
-            <input asp-for="@Model.CategoryId" rows="3" class="form-control" disabled />
+            <label asp-for="@Model.Category"></label>
+            <input asp-for="@Model.Category.Name" rows="3" class="form-control" disabled />
         </div>
         <div class="mb-3">
             <label asp-for="@Model.Rate"></label>

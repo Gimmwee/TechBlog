@@ -347,6 +347,7 @@ namespace TechBlog.Core.DataContext
                    CommentHeader = "Great article!",
                    CommentText = "This article provided a lot of useful information. I learned a lot from it. Thank you!",
                    CommentTime = DateTime.Now,
+                   Published = false
                },
                new Comment
                {
@@ -357,6 +358,7 @@ namespace TechBlog.Core.DataContext
                    CommentHeader = "Interesting perspective!",
                    CommentText = "I never thought about the topic from this angle before. Your article gave me a lot to think about. Thanks for sharing!",
                    CommentTime = DateTime.Now,
+                   Published = false
                },
                new Comment
                {
@@ -367,6 +369,7 @@ namespace TechBlog.Core.DataContext
                    CommentHeader = "Question about the topic",
                    CommentText = "I have a question about one of the points you made in the article. Can you provide more information about XYZ? Thanks!",
                    CommentTime = DateTime.Now,
+                   Published = false
                },
                new Comment
                {
@@ -377,6 +380,7 @@ namespace TechBlog.Core.DataContext
                    CommentHeader = "Great article!",
                    CommentText = "This article provided a lot of useful information. I learned a lot from it. Thank you!",
                    CommentTime = DateTime.Now,
+                   Published = false
                },
 
 new Comment
@@ -388,6 +392,7 @@ new Comment
     CommentHeader = "Excellent post!",
     CommentText = "I really enjoyed reading this post. The examples were very helpful.",
     CommentTime = DateTime.Now,
+    Published = false
 },
 
 new Comment
@@ -399,6 +404,7 @@ new Comment
     CommentHeader = "Thanks for sharing",
     CommentText = "This post helped me understand machine learning better. Keep up the good work!",
     CommentTime = DateTime.Now,
+    Published = false
 },
 
 new Comment
@@ -410,6 +416,7 @@ new Comment
     CommentHeader = "Insightful article",
     CommentText = "I learned a lot from this post. Thank you for sharing your knowledge with us.",
     CommentTime = DateTime.Now,
+    Published = false
 },
 
 new Comment
@@ -421,6 +428,7 @@ new Comment
     CommentHeader = "Well-written post",
     CommentText = "This post was easy to read and understand. The examples were very helpful.",
     CommentTime = DateTime.Now,
+    Published = false
 },
 
 new Comment
@@ -432,6 +440,7 @@ new Comment
     CommentHeader = "Thank you for this post",
     CommentText = "I was struggling to understand machine learning before reading this post. It has helped me a lot.",
     CommentTime = DateTime.Now,
+    Published = false
 },
 
 new Comment
@@ -443,6 +452,7 @@ new Comment
     CommentHeader = "Great job!",
     CommentText = "This post was very informative. I learned a lot from it.",
     CommentTime = DateTime.Now,
+    Published = false
 },
 
 new Comment
@@ -454,6 +464,7 @@ new Comment
     CommentHeader = "Thanks for sharing your knowledge",
     CommentText = "This post was well-written and very informative. I appreciate you sharing your knowledge with us.",
     CommentTime = DateTime.Now,
+    Published = false
 },
 
 new Comment
@@ -465,6 +476,7 @@ new Comment
     CommentHeader = "Very helpful post",
     CommentText = "I was looking for an introduction to machine learning and this post was exactly what I needed. Thank you!",
     CommentTime = DateTime.Now,
+    Published = false
 },
 
 new Comment
@@ -476,6 +488,7 @@ new Comment
     CommentHeader = "Thanks for the explanation",
     CommentText = "This post explained machine learning in a way that was easy to understand. I appreciate it!",
     CommentTime = DateTime.Now,
+    Published = false
 }
            );
 

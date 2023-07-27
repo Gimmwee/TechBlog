@@ -12,5 +12,7 @@ namespace TechBlog.Core.Repository.IRepository
     public interface ITagRepository : IGenericRepository<Tag>
     {
         IEnumerable<Tag> GetTagByUrlSlug(string urlSlug);
+
+        IList<Tag> GetTagByName(string name);
     }
 }

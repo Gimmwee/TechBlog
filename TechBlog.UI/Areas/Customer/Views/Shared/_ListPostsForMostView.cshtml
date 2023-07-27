@@ -1,11 +1,11 @@
 ﻿@using TechBlog.Core.Models
 @using TechBlog.Core.Repository.UnitOfWork
-@model IEnumerable<Post>;
+@model IList<Post>;
 @inject IUnitOfWork unitOfWork
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
-    IEnumerable<Post> mostFiveViewedPosts = unitOfWork.PostRepository.GetMostViewedPost(5);
+    IList<Post> mostFiveViewedPosts = unitOfWork.PostRepository.GetMostViewedPost(5);
     
 }
 

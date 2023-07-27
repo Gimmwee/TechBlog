@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace FA.JustBlog.UI.Areas.Identity.Pages.Role
+namespace TechBlog.UI.Areas.Identity.Pages.Role
 {
     public class IndexModel : PageModel
     {

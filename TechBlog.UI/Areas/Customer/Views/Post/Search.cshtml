@@ -1,0 +1,72 @@
+﻿@model IEnumerable<TechBlog.Core.Models.Post>
+
+@{
+    ViewData["Title"] = "Search Results for " + ViewBag.SearchTerm;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <h2 class="my-4">Search Results for "@ViewBag.SearchTerm"</h2>
+            @if (ViewBag.Message != null)
+            {
+                <p>@ViewBag.Message</p>
+            }
+            @if (Model.Any())
+            {
+                @foreach (var post in Model)
+                {
+                    <div class="card mb-4">
+                        <a href="@Url.Action("Details", new { id = post.PostId })">
+                            <img class="card-img-top" src="@post.Image" alt="Post Img" />
+                        </a>
+                        <div class="card-body">
+                            <div class="small text-muted">@post.PostedOn?.ToString("MMMM dd, yyyy")</div>
+                            <h2 class="card-title h4">@post.Title</h2>
+                            <p class="card-text">@post.ShortDescription</p>
+                            <p class="card-text">Rate @post.Rate.ToString("#.##") by @post.ViewCount</p>
+                            <a class="btn btn-primary" href="@Url.Action("Details", new { id = post.PostId })">Read more →</a>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+        <div class="col-lg-4">
+            <!-- Search widget-->
+            <!-- Search widget-->
+            <div class="card mb-4">
+                <div class="card-header" style="font:bold; font-size:30px">Search</div>
+                <div class="card-body">
+                    <form method="get" asp-controller="Post" asp-action="Search">
+                        <div class="input-group">
+                            <input name="searchTerm" class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
+                            <button class="btn btn-primary" id="button-search" type="submit">Go!</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Categories widget-->
+            <div class="card mb-4">
+                <div class="card-header">Categories</div>
+                @Html.Partial("_CategoryMenu")
+            </div>
+            <div class="mb-4">
+                <h3 style="display:block; margin: 30px 0 10px 0;">Most View Posts</h3>
+                @Html.Partial("_ListPostsForMostView")
+                <hr />
+                <h3 style="display:block; margin: 30px 0 10px 0;">Lasted Posts</h3>
+                @Html.Partial("_ListPostsForLated")
+                <hr />
+                <h3 style="display:block; margin: 30px 0 10px 0;">Popular Tags</h3>
+                @Html.Partial("_PopularTags")
+            </div>
+            <!-- Side widget-->
+            <div class="card mb-4">
+                <div class="card-header">Side Widget</div>
+                <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+            </div>
+        </div>
+    </div>
+</div>

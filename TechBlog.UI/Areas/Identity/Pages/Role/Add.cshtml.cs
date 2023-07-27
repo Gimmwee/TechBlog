@@ -6,9 +6,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Xml.Linq;
 
-namespace FA.JustBlog.UI.Areas.Identity.Pages.Role
+namespace TechBlog.UI.Areas.Identity.Pages.Role
 {
-    [Authorize(Roles = "Admin, Blog Owner")]
+   // [Authorize(Roles = "Admin, Blog Owner")]
     public class AddModel : PageModel
     {
         private readonly RoleManager<IdentityRole> _roleManager;

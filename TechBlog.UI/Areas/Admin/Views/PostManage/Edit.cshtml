@@ -16,6 +16,12 @@
             <h4 class="text-dark">Edit Post</h4>
             <hr />
         </div>
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @TempData["Message"]
+            </div>
+        }
         <div asp-validation-summary="All" class="text-danger"></div>
         <div asp-validation-summary="All" class="text-danger"></div>
         <div class="mb-3">
@@ -27,6 +33,22 @@
             <textarea asp-for="@Model.ShortDescription" rows="3" class="form-control"></textarea>
             <span asp-validation-for="@Model.ShortDescription" class="text-danger"></span>
         </div>
+
+        <!-- Thêm trường đầu vào để nhập URL ảnh -->
+        <div class="mb-3">
+            <label asp-for="@Model.Image">Image URL</label>
+            <input type="text" asp-for="@Model.Image" class="form-control" />
+        </div>
+
+        <!-- Hiển thị ảnh hiện tại của bài viết -->
+        @if (!string.IsNullOrEmpty(Model.Image))
+        {
+            <div class="mb-3">
+                <label>Current Image</label><br />
+                <img src="@Model.Image" alt="Current Image" style="max-width: 300px; max-height: 300px;" />
+            </div>
+        }
+
         <div class="mb-3">
             <div class="form-group">
                 <label asp-for="PostContent" class="control-label"></label>

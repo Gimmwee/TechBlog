@@ -1,0 +1,76 @@
+﻿@model IEnumerable<TechBlog.Core.Models.Comment>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_ActionLayout.cshtml";
+}
+
+<h2 style="font-weight:600">Search result for @ViewBag.SearchTerm</h2>
+
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Post)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CommentHeader)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CommentText)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CommentTime)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PostId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CommentHeader)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CommentText)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CommentTime)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.CommentId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.CommentId">Details</a> |
+                        @Html.ActionLink("Delete", "Delete",new {  id=item.CommentId  }, new { onclick = "return confirm('Are you sure to delete this comment?');"})
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
